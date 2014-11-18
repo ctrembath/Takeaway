@@ -19,8 +19,7 @@ require 'menu'
     expect(menu.dish_count).to eq (10)
   end
 
-
-
-
-
+  it "should display a list of all available dishes" do
+    expect(menu.display_dishes).to eq([])
   end
+end
