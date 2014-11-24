@@ -11,9 +11,12 @@ class Order
   @dishes.count
   end
 
-    def add_dish!(dish)
+  def add_dish!(dish)
     @dishes << dish
+  end
 
+  def total_price
+    @dishes.map { |dish| dish.price }.inject {|sum, n| sum + n}
   end
 
 end

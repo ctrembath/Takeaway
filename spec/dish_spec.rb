@@ -1,4 +1,5 @@
 require 'dish'
+require 'line_item'
 
   describe Dish do
 
