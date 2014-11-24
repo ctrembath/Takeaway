@@ -30,4 +30,9 @@ let(:pizza)   {double :dish, :name => "pizza", :price => 3}
 
   end
 
+  it "knows the contents of the order" do
+    order.add_dish!(pizza)
+    order.add_dish!(kebab)
+    expect(order.dishes).to eq([pizza, kebab])
+  end
 end
