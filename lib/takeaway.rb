@@ -3,13 +3,16 @@ class Takeaway
 
 attr_accessor :customer, :customer_number, :total_order
 
-  def order
-    @order
+  def initialize (customer, customer_number)
+    @customer = customer
+    @customer_number = customer_number
   end
 
-  def accept_order(order)
-    @order = order
+  def customer_order(order)
+    @total_order = order
   end
+
+
 
   def send_sms(confirmation, customer_number)
 

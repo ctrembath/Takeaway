@@ -5,21 +5,21 @@ require 'order'
 
 describe Takeaway do
 
-  let (:takeaway) {Takeaway.new}
+  let (:takeaway) {Takeaway.new("clare", "+7964757454")}
   let (:dish) {double :dish}
   let (:order) {double :order}
+  # let (:customer) {double :customer "clare"}
+  # let (:customer_number) {double :customer_number, 
 
-  it "should accept an order" do
-    takeaway.accept_order(order)
-    expect(takeaway.order).to eq(order)
+  it "should have a customer" do
+    expect(takeaway.customer).to eq("clare")
   end
 
-  # it "should not process an order unless a customer requested it" do
-  #   expect(takeaway.order).to 
-  # end
+  it "should know the customers number" do
+    expect(takeaway.customer_number).to eq("+7964757454")
+  end
 
-  # it "should be able to send out a receipt" do
-  #   expect(customer).
-  # end
-
+  it "should know the customers order" do
+    expect(takeaway.customer_order(order)).to eq(order)
+  end
 end
