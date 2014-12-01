@@ -1,7 +1,6 @@
 class Order
 
-
-  attr_reader :dishes, :total_order
+  attr_reader :dishes
 
   def initialize
     @dishes = []
@@ -18,6 +17,5 @@ class Order
   def total_price
     @dishes.map { |dish| dish.price }.inject {|sum, n| sum + n}
   end
-
 
 end

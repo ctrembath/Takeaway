@@ -1,7 +1,5 @@
 class Menu
 
-  attr_accessor :dishes
-
   def initialize
     @dishes = []
   end

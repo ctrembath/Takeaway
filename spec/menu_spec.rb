@@ -1,7 +1,7 @@
 require 'menu'
 require 'dish'
 
-  describe Menu do
+describe Menu do
     let(:menu) {Menu.new}
     let(:dish) {double :dish}
 

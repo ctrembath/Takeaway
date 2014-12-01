@@ -7,5 +7,4 @@ class Customer
     @telephone_number = telephone_number
   end
 
-
 end

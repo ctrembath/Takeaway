@@ -2,14 +2,12 @@ require 'order'
 require 'menu'
 require 'dish'
 
-  describe Order do
+describe Order do
 
-let(:order)   {Order.new}
-let(:menu)    {double :menu}
-let(:kebab)    {double :dish, :name => "kebab", :price => 2.50}
-let(:pizza)   {double :dish, :name => "pizza", :price => 3}
-
-
+  let(:order)   {Order.new}
+  let(:menu)    {double :menu}
+  let(:kebab)    {double :dish, :name => "kebab", :price => 2.50}
+  let(:pizza)   {double :dish, :name => "pizza", :price => 3}
 
   it "should have a default number of 0 dishes" do
     expect(order.total_order).to eq(0)
